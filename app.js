@@ -55,3 +55,14 @@ function displayLightImage(lightImage, index) {
   const newSrc = [...images][index].getAttribute("src");
   lightImage.setAttribute("src", newSrc);
 }
+
+const moreBtn = document.querySelector(".more-btn");
+const text = document.querySelector(".history");
+moreBtn.addEventListener("click", function () {
+  text.classList.toggle("active");
+  if (moreBtn.innerText === "もっと読む") {
+    moreBtn.innerText = "閉める";
+  } else {
+    moreBtn.innerText = "もっと読む";
+  }
+});
