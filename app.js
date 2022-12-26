@@ -33,7 +33,7 @@ document.addEventListener("click", function (e) {
   let btn = document.getElementById("lightbox-fullscreen");
   btn.addEventListener("click", () => {
     if (myDocument.requestFullscreen) {
-      document.querySelector(".lightbox-content").style.width = "100%";
+      document.querySelector(".lightbox-content").style.width = "90%";
       myDocument.requestFullscreen();
     } else if (myDocument.msRequestFullscreen) {
       myDocument.msRequestFullscreen();
