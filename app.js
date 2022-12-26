@@ -2,7 +2,7 @@ $(document).ready(function () {
   $(".hero").slick({
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 4500,
+    autoplaySpeed: 5000,
     cssEase: "linear",
     pauseOnHover: false,
   });
@@ -15,6 +15,7 @@ function handleZoomImage(event) {
   const template = `
    <div class="lightbox">
      <div class="lightbox-content">
+       <button id="lightbox-fullscreen"><i class="fa-solid fa-expand"></i></button>
        <i class="fa fa-angle-left lightbox-prev"></i>
        <img
          src="${image}"
@@ -28,6 +29,20 @@ function handleZoomImage(event) {
 }
 let index = 0;
 document.addEventListener("click", function (e) {
+  let myDocument = document.documentElement;
+  let btn = document.getElementById("lightbox-fullscreen");
+  btn.addEventListener("click", () => {
+    if (myDocument.requestFullscreen) {
+      document.querySelector(".lightbox-content").style.width = "100%";
+      myDocument.requestFullscreen();
+    } else if (myDocument.msRequestFullscreen) {
+      myDocument.msRequestFullscreen();
+    } else if (myDocument.mozRequestFullScreen) {
+      myDocument.mozRequestFullScreen();
+    } else if (myDocument.webkitRequestFullscreen) {
+      myDocument.webkitRequestFullscreen();
+    }
+  });
   const lightImage = document.querySelector(".lightbox-image");
   if (!lightImage) return;
   let lightSrc = lightImage.getAttribute("src");
