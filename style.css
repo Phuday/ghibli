@@ -213,7 +213,7 @@ nav {
   font-size: 20px;
   padding-left: 20px;
   color: var(--white);
-  font-family: var(--text-font2);
+  font-family: var(--num-font2);
   font-weight: 400;
   line-height: 1.6;
   transform: translateY(-100px);
@@ -287,6 +287,7 @@ nav {
 .news-container {
   display: flex;
   gap: 30px;
+  padding-bottom: 50px;
 }
 .news-box {
   width: 80%;
@@ -506,14 +507,21 @@ footer p {
   text-decoration: none;
   transition: 0.2s linear;
 }
+.film-img img {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 .film-img a:hover {
   opacity: 0.7;
   transition: 0.2s linear;
 }
 .film-img span {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--gray-text);
   font-family: var(--num-font);
+  display: block;
+  padding: 2px;
+  line-height: 1.8;
+  margin-top: 5px;
 }
 .film-info {
   width: 65%;
@@ -555,7 +563,7 @@ footer p {
   font-weight: unset;
   letter-spacing: 1px;
   word-break: keep-all;
-  width: 155px;
+  width: 170px;
 }
 .film-info table td {
   font-size: 16px;
@@ -672,12 +680,16 @@ footer p {
   border-radius: 4px;
 }
 .lightbox-content i {
-  padding: 2rem;
-  color: white;
+  padding: 1.5rem;
+  margin: 5px;
+  color: var(--white);
   font-size: 60px;
   cursor: pointer;
   flex-shrink: 0;
   user-select: none;
+}
+.lightbox-content i:hover {
+  color: var(--gray-text);
 }
 #lightbox-fullscreen {
   position: absolute;
@@ -753,9 +765,11 @@ footer p {
 }
 .history {
   font-size: 18px;
-  letter-spacing: 1px;
-  line-height: 1.6;
+  letter-spacing: 2px;
+  line-height: 1.8;
   padding-left: 10px;
+  font-family: var(--num-font2);
+  font-weight: 600;
 }
 .map {
   display: flex;
