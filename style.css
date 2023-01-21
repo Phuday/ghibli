@@ -398,6 +398,9 @@ nav {
   color: var(--blu);
   text-decoration: underline;
 }
+.news-link {
+  font-size: 14px;
+}
 .event-title {
   display: flex;
   align-items: center;
@@ -411,7 +414,7 @@ nav {
   color: var(--white);
   background-color: var(--blu);
   padding: 0 6px;
-  font-size: 16px;
+  font-size: 14px;
   margin-right: 10px;
 }
 .menu {
