@@ -7,6 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
       cssEase: "linear",
       pauseOnHover: false,
     });
+    $(".movie-img-container.flex").slick({
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      cssEase: "Ease-in",
+      pauseOnHover: false,
+      fade: true,
+    });
   });
 
   const images = document.querySelectorAll(".movie-img-container img");
